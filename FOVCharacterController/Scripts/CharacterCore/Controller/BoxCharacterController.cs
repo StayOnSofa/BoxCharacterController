@@ -95,6 +95,7 @@ namespace CharacterCore.Controller
             GroundAngle = Vector3.Angle(Normal, Vector3.up);
 
             IsGrounded = false;
+            IsTouchesCeiling = false;
             
             var directionXZ = new Vector3(direction.x, 0, direction.z);
             var resultXZ = CollisionResolver.StepResolver(_boxCollider, transform.position, directionXZ, _layerMask);
